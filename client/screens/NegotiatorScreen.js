@@ -12,7 +12,6 @@ import {
 import EmotionFace from "../components/EmotionFace";
 import Suggestion from "../components/Suggestion";
 
-
 const NegotiatorScreen = () => {
   return (
     <View style={{ flex: 1 }}>
