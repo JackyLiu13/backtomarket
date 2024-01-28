@@ -1,0 +1,22 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: uofp
+    src: ./
+    engine: python3.9
+    primary: true
+    public: true
+    run: |
+      python -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+      uvicorn main:app
+    dev: myenv/bin/uvicorn main:app --reload
+    presets:
+      env:
+        - name: AIRTABLE_API_KEY
+          default: patWGidxrqgF8rQi4.2562e74e0371a711373ff6335a9157f8b4a056860aaa883f9234e811b48da1d0
+        - name: AIRTABLE_BASE_ID
+          default: app7YM1KIxjnuyEAD
+        - name: AFFINITY_API_KEY
+          default: vfydrscPAk6W
