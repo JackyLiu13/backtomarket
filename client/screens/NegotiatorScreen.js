@@ -12,6 +12,7 @@ import {
 import EmotionFace from "../components/EmotionFace";
 import Suggestion from "../components/Suggestion";
 
+
 const NegotiatorScreen = () => {
   return (
     <View style={{ flex: 1 }}>
@@ -51,6 +52,7 @@ const NegotiatorScreen = () => {
               justifyContent: "center",
               flex: 1,
               marginTop: 30,
+              marginBottom: '10%'
             }}
           >
             <Text style={{ fontSize: 25, color: "white" }}>Offer Type</Text>

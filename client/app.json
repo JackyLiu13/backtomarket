@@ -26,7 +26,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFFFFF"
       },
       "permissions": ["android.permission.RECORD_AUDIO"],
       "package": "com.anonymous.SpeectToTextApp"
