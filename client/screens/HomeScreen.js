@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, View, Text, TouchableOpacity, StyleSheet, TextInput } from "react-native";
+import { Button, View, Text, TouchableOpacity, StyleSheet, TextInput, Image } from "react-native";
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -31,10 +31,12 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-start" }}>
-        <Button
-            title="Go to Test page"
-            onPress={() => navigation.navigate("TestPage")}
-          />      
+        <Image
+          style={{ width: 200, height: 200, marginTop:'50', marginBottom:'70%' }}
+          source={{
+            uri: "https://cdn.discordapp.com/attachments/1200574557090758749/1201121564188496002/Back_to_the_Market_Logo.png?ex=65c8aaa0&is=65b635a0&hm=352b7e17d1c59e1abeb216e8f292514bd0090ea452cad7ef9edb2ded25322e75&"
+            }}
+        />    
       </View>
     </View>
   );

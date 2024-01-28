@@ -61,10 +61,14 @@ export default function FailedTradeScreen({ navigation }) {
           justifyContent: "center",
         }}
       >
-        {/* <Image source={.client/assets/Fail.png} /> */}
+
+        <Image
+          style={{ width: 300, height: 300, marginTop:'-50%', marginBottom:'20%' }}
+          source={{
+            uri: "https://cdn.discordapp.com/attachments/1200574557090758749/1200997968464052284/negotiationFail.png?ex=65c83785&is=65b5c285&hm=8d89921aecdb309956227f6f0f1c247807f7196545fb739888944660b8699bc6&"
+            }}
+        />
         <Text style={styles.text}>Unsuccessful Trade</Text>
-        {/* <Image source={require('https://discord.com/channels/@me/1200574557090758749/1200997968761868318')}/>
-        style={styles.image} */}
 
         <Button
           title="Back to Home Screen"

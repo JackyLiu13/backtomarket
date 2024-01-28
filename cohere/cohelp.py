@@ -1,13 +1,11 @@
 import cohere
 import time
 
+API_KEY = "eQsELk9xHfwh99gme2t2H03TgutvC0auWv77P8os"
 
-def generate_suggestions():
-    co = cohere.Client("eQsELk9xHfwh99gme2t2H03TgutvC0auWv77P8os")
-    haggle = "my friend 200 good price"
-    country = "china"
-    product ="hoodie"
-    prompt = f"you are traveler that is exploring the a local market in {country}. You come across a {product} that you want to buy but the haggler is giving you a hard time for prices. Come up with potential responses that are going to be aggressive to ask the haggler to get a lower price, the responses should be in the format of a json with the key suggestions. Give rough suggested responses as the haggler loves to haggle. The haggler is asking: {haggle}. An example of the json will be ```json{{\"suggestions\": [\"{{suggestion1}}\",\"{{suggestion2}}\"]}}```"   
+def generate_suggestions(country, product, haggle):
+    co = cohere.Client(API_KEY)
+    prompt = f"you are traveler that is exploring the a local market in {country}. You come across a {product} that you want to buy but the haggler is giving you a hard time for prices. Come up with potential responses that are going to be aggressive to ask the haggler to get a lower price, the responses should be in the format of a json with the key suggestions. Give rough suggested responses in english as the haggler loves to haggle. The haggler is asking: {haggle}. An example of the json will be ```json{{\"suggestions\": [\"{{suggestion1}}\",\"{{suggestion2}}\"]}}```"   
     print(prompt)
     generate = co.chat(
         model="command-nightly",
@@ -16,8 +14,23 @@ def generate_suggestions():
     )
     return generate.text
 
+def generate_prices(country,product,price):
+    co = cohere.Client("eQsELk9xHfwh99gme2t2H03TgutvC0auWv77P8os")
+    # country = "china"
+    # product = "hoodie"
+    # price = "260"
+    prompt = """i am in {country} and i am trying to buy a singular {product} at a street market as an average consumer. The seller is trying to sell for {price} of {country}'s currency which is too high. Suggest me only values of fair prices in {country}'s currency with keys of low, medium, high of {country} and also provide some negotiation tips as just a paragraph. produce a singular json with keys prices and negotiation suggestions as a string, for example ```json{{"prices": {{"low": "","medium":"","high":""}},"negotiation_tips": ""}}``` """
+    prompt = prompt.format(country=country, product=product, price=price)
+    
+    generate = co.chat(
+        model="command-nightly",
+        message=prompt,	
+        temperature=0
 
-def generate_content():
+    )
+    return generate.text
+
+def test_content():
     co = cohere.Client("eQsELk9xHfwh99gme2t2H03TgutvC0auWv77P8os")
     documents = [{"title": "Sweatshirt prices", "snippet": "Sweatshirt prices"}]
     country = "china"
@@ -45,4 +58,20 @@ def generate_content():
     #get end time
     end = time.time() - start
     print("Time taken to generate content: ", end)
+    return generate.text
+
+
+
+def testSuggestions():
+    co = cohere.Client("eQsELk9xHfwh99gme2t2H03TgutvC0auWv77P8os")
+    haggle = "my friend 200 good price"
+    country = "china"
+    product ="hoodie"
+    prompt = f"you are traveler that is exploring the a local market in {country}. You come across a {product} that you want to buy but the haggler is giving you a hard time for prices. Come up with potential responses that are going to be aggressive to ask the haggler to get a lower price, the responses should be in the format of a json with the key suggestions. Give rough suggested responses as the haggler loves to haggle. The haggler is asking: {haggle}. An example of the json will be ```json{{\"suggestions\": [\"{{suggestion1}}\",\"{{suggestion2}}\"]}}```"   
+    print(prompt)
+    generate = co.chat(
+        model="command-nightly",
+        message=prompt,
+        temperature=0,
+    )
     return generate.text
