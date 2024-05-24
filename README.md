@@ -1,7 +1,7 @@
 # Back to the Market
-[![Watch the video](https://img.youtube.com/vi/kux9BUXg9D4/hqdefault.jpg)](https://www.youtube.com/embed/kux9BUXg9D4)
-[<img src="https://img.youtube.com/vi/kux9BUXg9D4/hqdefault.jpg" width="600" height="300"
-/>](https://www.youtube.com/embed/kux9BUXg9D4)
+[![Check out the video](https://img.youtube.com/vi/)](https://www.youtube.com/embed/kux9BUXg9D4)
+[[Check out the devpost]](https://devpost.com/software/back-to-the-market)
+
 
 ![gallery1](https://github.com/JackyLiu13/backtomarket/assets/43994701/28b9c4cb-cdba-4d41-ac9f-b454fb3f3aef)
 ![gallery2](https://github.com/JackyLiu13/backtomarket/assets/43994701/f1b55b1b-0173-4301-b04d-65543dac6854)
