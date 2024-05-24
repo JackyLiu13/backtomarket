@@ -1,5 +1,7 @@
 # Back to the Market
-<iframe width="786" height="556" src="https://www.youtube.com/embed/kux9BUXg9D4" title="Back to the Market" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/kux9BUXg9D4/hqdefault.jpg)](https://www.youtube.com/embed/kux9BUXg9D4)
+[<img src="https://img.youtube.com/vi/kux9BUXg9D4/hqdefault.jpg" width="600" height="300"
+/>](https://www.youtube.com/embed/kux9BUXg9D4)
 
 ![gallery1](https://github.com/JackyLiu13/backtomarket/assets/43994701/28b9c4cb-cdba-4d41-ac9f-b454fb3f3aef)
 ![gallery2](https://github.com/JackyLiu13/backtomarket/assets/43994701/f1b55b1b-0173-4301-b04d-65543dac6854)
